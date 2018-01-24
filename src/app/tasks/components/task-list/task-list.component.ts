@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { Task } from './../../models/task';
-import { TaskArrayService } from './../services/task-array.service';
+import { TaskArrayService } from './../../services/task-array.service';
 
 @Component({
   templateUrl: './task-list.component.html',
