@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 // rxjs
 import { switchMap } from 'rxjs/operators';
@@ -18,6 +18,7 @@ export class UserFormComponent implements OnInit {
   constructor(
     private userArrayService: UserArrayService,
     private route: ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -40,12 +41,15 @@ export class UserFormComponent implements OnInit {
 
     if (user.id) {
       this.userArrayService.updateUser(user);
+      this.router.navigate(['/users', {editedUserID: user.id}]);
     } else {
       this.userArrayService.addUser(user);
+      this.goBack();
     }
     this.originalUser = {...this.user};
   }
 
   goBack() {
+    this.router.navigate(['./../../'], { relativeTo: this.route});
   }
 }

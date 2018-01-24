@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter  } from '@angular/core';
 
 import { User } from './../../models/user.model';
 
@@ -9,7 +9,9 @@ import { User } from './../../models/user.model';
 })
 export class UserComponent {
   @Input() user: User;
+  @Output() edit = new EventEmitter<User>();
 
   editUser() {
+    this.edit.emit(this.user);
   }
 }
