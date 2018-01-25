@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { TasksModule } from './tasks/tasks.module';
 import { UsersModule } from './users/users.module';
 import { CoreModule } from './core/core.module';
+import { AdminModule } from './admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CoreModule } from './core/core.module';
     TasksModule,
     CoreModule,
     UsersModule,
-    AppRoutingModule
+    AdminModule,
+    AppRoutingModule,
   ],
   providers: [
   ],
