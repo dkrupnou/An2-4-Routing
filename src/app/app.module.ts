@@ -8,9 +8,8 @@ import { AppRoutingModule, appRouterComponents } from './app.routing.module';
 
 import { AppComponent } from './app.component';
 import { TasksModule } from './tasks/tasks.module';
-import { UsersModule } from './users/users.module';
 import { CoreModule } from './core/core.module';
-import { AdminModule } from './admin/admin.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -23,9 +22,8 @@ import { AdminModule } from './admin/admin.module';
     FormsModule,
     TasksModule,
     CoreModule,
-    UsersModule,
-    AdminModule,
     AppRoutingModule,
+    SharedModule,
   ],
   providers: [
   ],

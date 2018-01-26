@@ -1,7 +1,7 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { MessagesService, AuthService } from './services';
+import { MessagesService, AuthService, CustomPreloadingStrategyService  } from './services';
 import { MessagesComponent } from './components';
 import { AuthGuard } from './guards/auth.guard';
 import { LoginComponent } from './components/login/login.component';
@@ -14,7 +14,8 @@ import { LoginComponent } from './components/login/login.component';
   providers: [
     MessagesService,
     AuthGuard,
-    AuthService
+    AuthService,
+    CustomPreloadingStrategyService
   ]
 })
 export class CoreModule {
